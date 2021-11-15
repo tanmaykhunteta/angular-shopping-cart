@@ -14,10 +14,10 @@ export class ProductDetailsComponent implements OnInit {
 
 
   constructor(private route: ActivatedRoute,
-    private cartService: CartsService) { }
+    private cartsService: CartsService) { }
 
   addToCart(product: Product){
-    this.cartService.addToCart(product);
+    this.cartsService.addToCart(product);
     window.alert("You product has been successfully added to the cart");
   }
 
