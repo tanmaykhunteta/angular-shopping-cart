@@ -10,13 +10,17 @@ import { FormBuilder } from '@angular/forms';
 export class CartComponent implements OnInit {
   // items = this.cartsService.getItems();
   items = this.cartsService.getItems();
+  // checkOutForm = this.formBuilder.group({
+  //   name: '',
+  //   address: ''
+  // });
   checkOutForm = this.formBuilder.group({
     name: '',
-    address: ''
+    address: '',
   });
   constructor(
     private cartsService: CartsService,
-    private formBuilder: FormBuilder,
+    private formBuilder: FormBuilder
   ) {}
   onSubmit(): void {
     this.items = this.cartsService.clearCart();
